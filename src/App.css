@@ -1,0 +1,40 @@
+.headerBar {
+  background-color: gray;
+  width: 100%;
+}
+
+.headerTitle {
+  font-size: 2em;
+}
+
+img {
+  height: 50%;
+  width: 30%;
+}
+
+li {
+  list-style-type: none;
+}
+
+
+
+
+
+/*________SHOP ALL_________  */
+
+.inventoryContainer {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: RGB(221,203,135);
+
+}
+
+.itemDiv {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  margin-left: 1%;
+}
