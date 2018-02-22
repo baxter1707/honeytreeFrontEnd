@@ -11,6 +11,7 @@ import {AboutUs} from './components/AboutUs'
 import HoneyJars from './components/HoneyJars'
 import Candy from './components/Candy'
 import Extras from './components/Extras'
+import BuyScreen from './components/BuyScreen'
 
 import { createStore, applyMiddleware, compose} from 'redux'
 import { Provider } from 'react-redux'
@@ -35,6 +36,7 @@ ReactDOM.render(
         <Route path = '/HoneyJars' component = {HoneyJars} />
         <Route path = '/Candy' component = {Candy} />
         <Route path = '/Extras' component = {Extras} />
+        <Route path = '/BuyScreen' component = {BuyScreen} />
         <Route path = '/' component= {Home} />
 
       </Switch>

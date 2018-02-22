@@ -2,7 +2,8 @@ import * as actionTypes from './actions'
 
 
 const initialState = {
-  honey : []
+  honey : [],
+  id : ''
 }
 
 const reducer = (state = initialState, action) => {
@@ -11,6 +12,12 @@ const reducer = (state = initialState, action) => {
     return {
       ...state,
       honey : action.honey
+    }
+
+    case actionTypes.BUY_ITEM:
+    return {
+      ...state,
+      id : action.key
     }
   }
   return state

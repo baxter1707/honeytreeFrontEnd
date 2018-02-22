@@ -1,4 +1,5 @@
 export const LOAD_HONEY_LIST = "LOAD_HONEY_LIST"
+export const BUY_ITEM = "BUY_ITEM"
 
 
 export const loadHoneyInventory = () => {
@@ -12,9 +13,10 @@ export const loadHoneyInventory = () => {
   }
 }
 
-export const loadInventory = (honey) => {
+export const loadInventory = (honey, id) => {
   return {
     type : LOAD_HONEY_LIST,
-    honey : honey
+    honey : honey,
+    id : id
   }
 }

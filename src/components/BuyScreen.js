@@ -3,9 +3,9 @@ import { connect } from 'react-redux'
 import { loadHoneyInventory} from '../store/actions'
 import {Link} from 'react-router-dom'
 import * as actionTypes from '../store/actions'
-import BuyButton from './BuyButton'
+import {store} from '../index.js'
 
-export class Extras extends Component {
+export class BuyScreen extends Component {
   constructor(props) {
     super(props)
   }
@@ -16,21 +16,22 @@ export class Extras extends Component {
 
   render() {
 
+console.log(this.state)
 
-        let inventoryItems = this.props.honey.map((honey,index) => {
-            if(honey.type == "Extras") {
+
+        let inventoryItems = this.props.honey.map((honey,id) => {
+            if(honey.id == this.props.id) {
             return (
             <div className= 'itemDiv' key = {honey.id}>
             <img src = {honey.image}/>
             <li> {honey.name} </li>
             <li> ${honey.price}</li>
             <li> {honey.description}</li>
-              <BuyButton id={honey.id} onBuyClick = {() => this.props.onBuyItem(honey.id)}/>
           </div>)}
         })
     return(
       <div>
-      <h1>Honey Jars Section</h1>
+      <h1>Buy Screen</h1>
 
       <div className = 'shoppingSections'>
 
@@ -67,10 +68,8 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    onInventoryListLoad : () => dispatch(loadHoneyInventory()),
-
-    onBuyItem : (key) => dispatch({type : actionTypes.BUY_ITEM, key : key})
+    onInventoryListLoad : () => dispatch(loadHoneyInventory())
   }
 }
 
-export default connect(mapStateToProps,mapDispatchToProps)(Extras)
+export default connect(mapStateToProps,mapDispatchToProps)(BuyScreen)
