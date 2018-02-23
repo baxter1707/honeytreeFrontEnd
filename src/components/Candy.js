@@ -4,6 +4,7 @@ import { loadHoneyInventory} from '../store/actions'
 import {Link} from 'react-router-dom'
 import * as actionTypes from '../store/actions'
 import BuyButton from './BuyButton'
+import {ShoppingSectionLinks} from './ShoppingSectionLinks'
 
 export class Candy extends Component {
   constructor(props) {
@@ -29,30 +30,19 @@ export class Candy extends Component {
             <li> {honey.name} </li>
             <li> ${honey.price}</li>
             <li> {honey.description}</li>
-              <BuyButton id={honey.id} onBuyClick = {() => this.props.onBuyItem(honey.id)}/>
+              <BuyButton id={honey.id} onBuyClick = {() => this.props.onBuyItem(honey.id, honey.name, honey.price, honey.description)}/>
           </div>)}
         })
     return(
       <div>
       <h1>Honey Jars Section</h1>
 
-      <div className = 'shoppingSections'>
+      <ShoppingSectionLinks />
 
-      <div>
-        <Link to = '/HoneyJars' > Honey Jars </Link>
-      </div>
-
-      <div>
-        <Link to = '/Candy' > Candy </Link>
-      </div>
-
-      <div>
-        <Link to = '/Extras' > Extras </Link>
-      </div>
 
       <div className = 'inventoryContainer'>
         {inventoryItems}
-      </div>
+
       </div>
       </div>
 
@@ -73,7 +63,7 @@ const mapDispatchToProps = dispatch => {
   return {
     onInventoryListLoad : () => dispatch(loadHoneyInventory()),
 
-    onBuyItem : (key) => dispatch({type : actionTypes.BUY_ITEM, key : key})
+    onBuyItem : (key,name, price,desc) => dispatch({type : actionTypes.BUY_ITEM, key : key, name: name, price: price, desc: desc})
   }
 }
 

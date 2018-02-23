@@ -4,6 +4,8 @@ import { loadHoneyInventory} from '../store/actions'
 import {Link} from 'react-router-dom'
 import * as actionTypes from '../store/actions'
 import {store} from '../index.js'
+import Checkout from './Checkout'
+import {ShoppingSectionLinks} from './ShoppingSectionLinks'
 
 export class BuyScreen extends Component {
   constructor(props) {
@@ -16,7 +18,7 @@ export class BuyScreen extends Component {
 
   render() {
 
-console.log(this.state)
+console.log(this.props)
 
 
         let inventoryItems = this.props.honey.map((honey,id) => {
@@ -31,26 +33,24 @@ console.log(this.state)
         })
     return(
       <div>
-      <h1>Buy Screen</h1>
+          <h1>Buy Screen</h1>
 
-      <div className = 'shoppingSections'>
+          <ShoppingSectionLinks />
 
-      <div>
-        <Link to = '/HoneyJars' > Honey Jars </Link>
-      </div>
 
-      <div>
-        <Link to = '/Candy' > Candy </Link>
-      </div>
+            <div className = 'inventoryContainer'>
+              {inventoryItems}
+            </div>
 
-      <div>
-        <Link to = '/Extras' > Extras </Link>
-      </div>
 
-      <div className = 'inventoryContainer'>
-        {inventoryItems}
-      </div>
-      </div>
+
+        <div className = 'checkoutSection'>
+          <Checkout
+            name = {this.props.name}
+            amount = {this.props.price}
+            />
+
+        </div>
       </div>
 
     )
@@ -61,7 +61,10 @@ console.log(this.state)
 const mapStateToProps = state => {
   return {
     honey : state.honey,
-    id : state.id
+    id : state.id,
+    price : state.price,
+    desc : state.desc,
+    name: state.name
   }
 }
 
