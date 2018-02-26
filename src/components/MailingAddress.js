@@ -42,18 +42,26 @@ handleSubmit = (event) => {
   render () {
       return (
     <div>
-      <div>
+      <div >
         <label> First Name </label>
+        <br />
         <input type='text' value={this.state.firstName} onChange={this.handleChangeFirstName} />
+        <br />
         <label> Last Name </label>
-        <input type='text' value={this.state.lastName} onChange={this.handleChangeLastName} />
+        <br />
+        <input type='text' value={this.state.lastName}
+        onChange={this.handleChangeLastName} />
+        <br />
         <label> Email </label>
+        <br />
         <input type='text' value={this.state.email} onChange={this.handleChangeEmail} />
+        <br />
         <label> Mailing Address </label>
+        <br />
         <input type='text' value={this.state.mailingAddress} onChange={this.handleChangeAddress} />
-        
 
 
+        <br />
         <button onClick = { () =>
           axios.post('http://localhost:4000/address', {
             firstName: this.state.firstName,

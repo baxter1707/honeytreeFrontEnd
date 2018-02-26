@@ -4,6 +4,7 @@ import './styles/BaseLayout.css';
 import './styles/Home.css';
 import './styles/ShopAll.css';
 import './styles/AboutUs.css';
+import './styles/BuyScreen.css';
 import { Home } from './components/Home'
 
 class App extends Component {

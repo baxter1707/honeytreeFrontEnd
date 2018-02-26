@@ -50,18 +50,22 @@ console.log(this.props)
             </div>
 
 
-
-            <div className = 'inventoryContainer'>
+          <div className= 'buyScreenMainContainer'>
+            <div className = 'inventoryContainerBuyScreen'>
               {inventoryItems}
+
+              <div className='mailingAddressContainer'>
+                <MailingAddress />
+              </div>
             </div>
 
 
+          </div>
 
 
 
-        <div>
-          <MailingAddress />
-        </div>
+
+
 
         <div className = 'checkoutSection'>
           <Checkout
