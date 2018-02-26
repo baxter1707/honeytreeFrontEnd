@@ -5,20 +5,18 @@ export class ShoppingSectionLinks extends Component {
 
   render() {
     return (
-      <div className = 'shoppingSections'>
-
-        <div>
-          <Link to = '/HoneyJars' > Honey Jars </Link>
+      <div className = 'homeLinks'>
+        <div className= 'homeShopLink'>
+          <Link to = '/HoneyJars' style={{ color: 'white',textDecoration: 'none' }}> Shop Honey </Link>
         </div>
 
-        <div>
-          <Link to = '/Candy' > Candy </Link>
+        <div className= 'homeShopLink'>
+          <Link to = '/Candy' style={{ color: 'white', textDecoration: 'none' }}> Shop Candy </Link>
         </div>
 
-        <div>
-          <Link to = '/Extras' > Extras </Link>
+        <div className= 'homeShopLink'>
+          <Link to = '/Extras' style={{ color: 'white',textDecoration: 'none' }}> Shop Extras </Link>
         </div>
-
       </div>
     )
   }

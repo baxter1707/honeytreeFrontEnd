@@ -27,17 +27,26 @@ export class HoneyJars extends Component {
             return (
             <div className= 'itemDiv' key = {honey.id}>
             <img src = {honey.image}/>
-            <li> {honey.name} </li>
-            <li> ${honey.price}</li>
-            <li> {honey.description}</li>
+            <li className = 'productName'> {honey.name} </li>
+            <li className= 'productDescription'> {honey.description}</li>
               <BuyButton id={honey.id} onBuyClick = {() => this.props.onBuyItem(honey.id, honey.name, honey.price, honey.description)}/>
           </div>)}
         })
     return(
       <div>
-      <h1>Honey Jars Section</h1>
+      <div className='allProductsBannerImage'>
+        <div className='allProductsBannerContainer'>
+          <div className = 'allProductsTextContainer'>
+            <div className= 'allProductsHeader'>
+              <span>Honey</span>
+            </div>
+          </div>
+        </div>
 
-        <ShoppingSectionLinks />
+          <div>
+            <ShoppingSectionLinks />
+          </div>
+      </div>
 
 
 

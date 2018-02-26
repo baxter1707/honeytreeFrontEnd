@@ -25,22 +25,31 @@ export class ShopAll extends Component {
     let inventoryItems = this.props.honey.map((honey) => {
       return <div className= 'itemDiv' key = {honey.id}>
         <img src = {honey.image}/>
-        <li> {honey.name} </li>
-        <li> ${honey.price}</li>
-        <li> {honey.description}</li>
+        <li className='productName'> {honey.name} </li>
+        <li className='productDescription'> {honey.description}</li>
         <BuyButton id={honey.id} name = {honey.name} price = {honey.price} desc = {honey.description} onBuyClick = {() => this.props.onBuyItem(honey.id, honey.name, honey.price, honey.description)}/>
       </div>
     })
 
     return (
       <div>
-        <h1>View All Honey</h1>
+        <div className='allProductsBannerImage'>
+          <div className='allProductsBannerContainer'>
+            <div className = 'allProductsTextContainer'>
+              <div className= 'allProductsHeader'>
+                <span>All Products</span>
+              </div>
+            </div>
+          </div>
 
-          <ShoppingSectionLinks />
-
-        <div className = 'inventoryContainer'>
-          {inventoryItems}
+            <div>
+              <ShoppingSectionLinks />
+            </div>
         </div>
+
+          <div className = 'inventoryContainer'>
+            {inventoryItems}
+          </div>
       </div>
     )
   }

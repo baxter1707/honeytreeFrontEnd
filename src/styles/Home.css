@@ -1,0 +1,37 @@
+.mainHomeContainer {
+  background-image: url('http://www.dabur.com/daburhoney/images/articles/honey-for-weight-loss.jpg');
+  background-size: cover;
+}
+.homePage {
+  height: 80VH;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.homeHeader {
+  font-size: 4em;
+  color: white;
+}
+
+.homeTextContainer {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20%;
+}
+
+.homeLinks {
+  display: flex;
+  flex-direction: row;
+  margin:3% 17% 0 17%;
+  padding-bottom: 2%
+
+}
+
+.homeShopLink {
+  margin: 0 auto 0 auto;
+  padding: 10px 60px 10px 60px;
+  background-color: RGB(239,196,127);
+  border-radius: 25px;
+
+}

@@ -20,19 +20,22 @@ export class Header extends Component {
       <div className = 'headerBar'>
 
         <div className = 'headerLogo'>
-          <span className= 'headerTitle'> Honey Tree </span>
+          <div className = 'honeyTreeImageDiv'>
+          <img className = 'honeyTreeImage' src="https://preview.ibb.co/dV9HDH/The_Honey_Tree_Color.jpg" />
+          </div>
+          <span className= 'headerTitle'>The Honey Tree </span>
         </div>
 
-        <div>
-          <Link to = '/' > Home </Link>
+        <div className = 'headerLink'>
+          <Link to = '/' style={{ textDecoration: 'none' }} > Home </Link>
         </div>
 
-        <div>
-          <Link to = '/ShopAll' > Shop </Link>
+        <div className = 'headerLink'>
+          <Link to  = '/ShopAll' style={{ textDecoration: 'none' }} > Products </Link>
         </div>
 
-        <div>
-          <Link to = '/AboutUs' > About Us </Link>
+        <div className = 'headerLink'>
+          <Link to = '/AboutUs' style={{ textDecoration: 'none' }}> About Us </Link>
         </div>
 
       </div>
@@ -45,7 +48,15 @@ export class Footer extends Component {
 
   render() {
     return (
-      <h1>Footer</h1>
+      <div className = 'footerBar'>
+          <div className = 'footerTitle'>
+          <span> 2018 The Honey Tree</span>
+          </div>
+
+          <div className = 'footerTitle'>
+          <span> Privacy | Terms </span>
+          </div>
+      </div>
     )
   }
 }

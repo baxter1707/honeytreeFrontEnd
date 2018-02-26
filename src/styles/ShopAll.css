@@ -1,0 +1,52 @@
+.allProductsBannerImage {
+  background-image: url("https://preview.ibb.co/gOW00x/4204_Salem_West_Virginia_USA_Canon_EOS_40_D_55_mm_1_160_sec_at_f_5_6_ISO_100_2.jpg");
+  background-size: cover;
+}
+
+.allProductsBannerContainer {
+  height: 10VH;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.allProductsTextContainer {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2%;
+}
+
+.allProductsHeader {
+  font-size: 3em;
+  color: white;
+}
+
+
+
+
+.inventoryContainer {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 5% 0 5%;
+}
+
+.itemDiv {
+  display: flex;
+  flex-direction: column;
+  width: 33%;
+  height: 350px;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+.productName {
+  margin: 10px;
+  font-size: 1.2em;
+
+}
+
+.productDescription {
+  margin-bottom: 10px;
+  font-size: .8em;
+}

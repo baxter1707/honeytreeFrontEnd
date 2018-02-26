@@ -6,6 +6,7 @@ import * as actionTypes from '../store/actions'
 import {store} from '../index.js'
 import Checkout from './Checkout'
 import {ShoppingSectionLinks} from './ShoppingSectionLinks'
+import MailingAddress from './MailingAddress'
 
 export class BuyScreen extends Component {
   constructor(props) {
@@ -33,9 +34,21 @@ console.log(this.props)
         })
     return(
       <div>
-          <h1>Buy Screen</h1>
+        <div className='allProductsBannerImage'>
+          <div className='allProductsBannerContainer'>
+            <div className = 'allProductsTextContainer'>
+              <div className= 'allProductsHeader'>
+                <span>Extras</span>
+              </div>
+            </div>
+          </div>
 
-          <ShoppingSectionLinks />
+            <div>
+              <ShoppingSectionLinks />
+            </div>
+
+            </div>
+
 
 
             <div className = 'inventoryContainer'>
@@ -44,14 +57,20 @@ console.log(this.props)
 
 
 
+
+
+        <div>
+          <MailingAddress />
+        </div>
+
         <div className = 'checkoutSection'>
           <Checkout
             name = {this.props.name}
             amount = {this.props.price}
             />
-
         </div>
-      </div>
+
+    </div>
 
     )
   }

@@ -1,5 +1,7 @@
+import axios from 'axios'
 export const LOAD_HONEY_LIST = "LOAD_HONEY_LIST"
 export const BUY_ITEM = "BUY_ITEM"
+
 
 
 export const loadHoneyInventory = () => {
