@@ -1,0 +1,22 @@
+.aboutUsImage {
+height:100%;
+width: 80%;
+margin-left: 10%;
+margin-top: 2%
+}
+
+.aboutUsImageDiv {
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%
+}
+
+.bioContainer p {
+  font-size: 1.2em;
+  margin-left: 12%;
+  margin-right: 12%
+}

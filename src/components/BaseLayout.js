@@ -21,7 +21,7 @@ export class Header extends Component {
 
         <div className = 'headerLogo'>
           <div className = 'honeyTreeImageDiv'>
-          <img className = 'honeyTreeImage' src="https://preview.ibb.co/dV9HDH/The_Honey_Tree_Color.jpg" />
+          <img className = 'honeyTreeImage' src="http://i68.tinypic.com/8wxx68.png" />
           </div>
           <span className= 'headerTitle'>The Honey Tree </span>
         </div>
